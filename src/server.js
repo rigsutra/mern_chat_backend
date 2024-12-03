@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: process.env.ORIGIN_URL,
+    origin: ["http://localhost:5173", "https://mern-chat-app-ochre.vercel.app"],
   })
 );
 

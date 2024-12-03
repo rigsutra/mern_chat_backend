@@ -134,7 +134,9 @@ app.post("/register", async (req, res) => {
   }
 });
 
-const server = app.listen(4040);
+const server = app.listen(process.env.PORT_WW || 2525, () => {
+  console.log("Server started");
+});
 
 const wss = new WebSocket.Server({ server });
 wss.on("connection", (connection, req) => {
